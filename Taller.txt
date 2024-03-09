@@ -1,0 +1,581 @@
+//using System;
+//using System.Numerics;
+
+//class Punto1
+//{
+//    static void Main(string[] args)
+//    {
+//        List<int> votos = [];
+//        int candidato1 = 0;
+//        int candidato2 = 0;
+//        int candidato3 = 0;
+//        int j;
+
+//        Console.WriteLine("Ingrese la cantidad de votos: ");
+//        int cantidaddVotos = Convert.ToInt16(Console.ReadLine());
+//        if (cantidaddVotos <= 0)
+//        {
+//            Console.WriteLine("Número inválido");
+//            return;
+//        }
+//        for (j = 0; j < cantidaddVotos; j++)
+//        {
+//            Console.WriteLine("--------------Candidatos--------------");
+//            Console.WriteLine("Candidato 1 \t Candidato 2 \t Candidato 3");
+//            int voto = Convert.ToInt16(Console.ReadLine());
+//            if (voto <= 0 || voto > 3)
+//            {
+//                return;
+//            }
+//            else
+//            {
+//                votos.Add(voto);
+//            }
+//        }
+
+
+
+//        foreach (int i in votos)
+//        {
+//            if (i == 1)
+//            {
+//                candidato1++;
+//            }
+//            else if (i == 2)
+//            {
+//                candidato2++;
+//            }
+//            else
+//            {
+//                candidato3++;
+//            }
+
+
+//        }
+//        int p1 = candidato1 * 100 / cantidaddVotos;
+//        int p2 = candidato2 * 100 / cantidaddVotos;
+//        int p3 = candidato3 * 100 / cantidaddVotos;
+//        if (candidato1 > candidato2 && candidato1 > candidato3)
+//        {
+//            Console.WriteLine("\n El ganador es el candidato 1 con: " + candidato1 + " votos");
+//        }
+//        else if (candidato2 > candidato1 && candidato2 > candidato3)
+//        {
+//            Console.WriteLine("\n El ganador es el candidato 2 con: " + candidato2 + " votos");
+//        }
+//        else if (candidato3 > candidato1 && candidato3 > candidato2)
+//        {
+//            Console.WriteLine("\n El ganador es el candidato 3 con: " + candidato3 + " votos \n");
+//        }
+
+//        Console.WriteLine("---------Promedio de puntos--------- \n");
+//        Console.WriteLine("Votos totales: " + cantidaddVotos);
+//        Console.WriteLine("\n Porcentaje candidato 1: \n" + p1 + "% \n Votos: \n" + candidato1);
+//        Console.WriteLine("\n Porcentaje candidato 2: \n" + p2 + "% \n Votos: \n" + candidato2);
+//        Console.WriteLine("\n Porcentaje candidato 3: \n" + p3 + "% \n Votos: \n" + candidato3);
+
+
+
+
+//    }
+//}
+
+//class Punto2
+//{
+//    static void Main(string[] args)
+//    {
+//        int[] niños = [21, 32, 28, 19, 15, 26, 30];
+//        int[] jovenes = [56, 59, 75, 63, 81, 46, 66];
+//        int[] adultos = [87, 75, 69, 71, 88, 92, 76];
+//        int[] viejos = [67, 71, 59, 62, 92, 82, 75];
+
+//        int pesoN = 0;
+//        int pesoJ = 0;
+//        int pesoA = 0;
+//        int pesoV = 0;
+
+//        for (int i = 0; i < niños.Length - 1; i++)
+//        {
+//            pesoN += niños[i];
+//        }
+
+//        for (int i = 0; i <= jovenes.Length - 1; i++)
+//        {
+//            pesoJ += jovenes[i];
+//        }
+
+//        for (int i = 0; i <= adultos.Length - 1; i++)
+//        {
+//            pesoA += adultos[i];
+//        }
+
+//        for (int i = 0; i <= viejos.Length - 1; i++)
+//        {
+//            pesoV += viejos[i];
+//        }
+
+//        int promN = pesoN / niños.Length;
+//        int promJ = pesoJ / jovenes.Length;
+//        int promA = pesoA / adultos.Length;
+//        int promV = pesoV / viejos.Length;
+
+//        Console.WriteLine("---------Promedio de pesos por edades--------- \n");
+//        Console.WriteLine("Niños: " + promN + " Kg" + "\n");
+//        Console.WriteLine("Jóvenes: " + promJ + " Kg" + "\n");
+//        Console.WriteLine("Adultos: " + promA + "Kg " + "\n");
+//        Console.WriteLine("Viejos: " + promV + " Kg" + "\n");
+//    }
+//}
+
+//class Punto3
+//{
+//    static void Main(string[] args)
+//    {
+//        int clientes = 15;
+//        double ingresoTiendas = 0;
+
+//        for (int i = 0; i < clientes; i++)
+//        {
+//            Console.WriteLine("¿Cuántos kilos desea comprar?");
+//            double kilosComprar = Convert.ToDouble(Console.ReadLine());
+
+//            if (kilosComprar <= 0)
+//            {
+//                return;
+//            }
+//            Console.WriteLine("¿Cuánto vale el kilo?");
+//            double precioKilo = Convert.ToDouble(Console.ReadLine());
+
+//            if (precioKilo <= 0)
+//            {
+//                return;
+//            }
+
+//            if (kilosComprar > 10)
+//            {
+//                double compra = kilosComprar * precioKilo;
+//                double desc = compra * 0.15;
+//                double resultadoDesc = compra - desc;
+//                Console.WriteLine("Ha recibido descuento del 15% \n Usted pagará: " + "$" + resultadoDesc);
+//                ingresoTiendas += resultadoDesc;
+//            }
+//            else if (kilosComprar <= 10)
+//            {
+//                double resultado = kilosComprar * precioKilo;
+//                Console.WriteLine("Usted pagará: " + "$" + resultado);
+//                ingresoTiendas += resultado;
+
+//            }
+
+
+//        }
+//        Console.WriteLine("En total la tienda ha recibido " + "$" + ingresoTiendas);
+//    }
+//}
+
+//class Punto5
+//{
+//    static void Main(string[] args)
+//    {
+//        int categoria1 = 0;
+//        int categoria2 = 0;
+//        int categoria3 = 0;
+//        Console.WriteLine("Animal a estudiar: ");
+//        string animal = Console.ReadLine().ToUpper();
+
+//        if (animal == "ELEFANTE")
+//        {
+//            for (int i = 1; i <= 20; i++)
+//            {
+//                Console.WriteLine("Ingrese la edad del elefante #" + i + ":");
+//                int edad = Convert.ToInt16(Console.ReadLine());
+//                if (edad < 0)
+//                {
+//                    Console.WriteLine("Ingrese una edad válida!");
+//                    return;
+//                }
+//                else
+//                {
+//                    if (edad >= 0 && edad <= 1)
+//                    {
+//                        categoria1++;
+//                    }
+//                    else if (edad > 1 && edad < 3)
+//                    {
+//                        categoria2++;
+//                    }
+//                    else if (edad >= 3)
+//                    {
+//                        categoria3++;
+//                    }
+//                }
+
+//            }
+//            double por1 = (categoria1 * 100) / 20;
+//            double por2 = (categoria2 * 100) / 20;
+//            double por3 = (categoria3 * 100) / 20;
+
+//            Console.WriteLine("El porcentaje de elefantes de 0 a 1 año es de: " + por1 + "%");
+//            Console.WriteLine("El porcentaje de elefantes de más de 1 año y menores de 3 años es de: " + por2 + "%");
+//            Console.WriteLine("El porcentaje de elefantes de 3 años en adelante es de: " + por3 + "%");
+//        }
+
+//        else if (animal == "JIRAFA")
+//        {
+//            for (int i = 1; i <= 15; i++)
+//            {
+//                Console.WriteLine("Ingrese la edad de la jirafa #" + i + ":");
+//                int edad = Convert.ToInt16(Console.ReadLine());
+//                if (edad < 0)
+//                {
+//                    Console.WriteLine("Ingrese una edad válida!");
+//                    return;
+//                }
+//                else
+//                {
+//                    if (edad >= 0 && edad <= 1)
+//                    {
+//                        categoria1++;
+//                    }
+//                    else if (edad > 1 && edad < 3)
+//                    {
+//                        categoria2++;
+//                    }
+//                    else if (edad >= 3)
+//                    {
+//                        categoria3++;
+//                    }
+//                }
+
+//            }
+//            double por1 = (categoria1 * 100) / 15;
+//            double por2 = (categoria2 * 100) / 15;
+//            double por3 = (categoria3 * 100) / 15;
+
+//            Console.WriteLine("El porcentaje de jirafas de 0 a 1 año es de: " + por1 + "%");
+//            Console.WriteLine("El porcentaje de jirafas de más de 1 año y menores de 3 años es de: " + por2 + "%");
+//            Console.WriteLine("El porcentaje de jirafas de 3 años en adelante es de: " + por3 + "%");
+//        }
+
+//        else if (animal == "CHIMPANCÉ" || animal == "CHIMPANCE")
+//        {
+//            for (int i = 1; i <= 40; i++)
+//            {
+//                Console.WriteLine("Ingrese la edad del chimpancé #" + i + ":");
+//                int edad = Convert.ToInt16(Console.ReadLine());
+//                if (edad < 0)
+//                {
+//                    Console.WriteLine("Ingrese una edad válida!");
+//                    return;
+//                }
+//                else
+//                {
+//                    if (edad >= 0 && edad <= 1)
+//                    {
+//                        categoria1++;
+//                    }
+//                    else if (edad > 1 && edad < 3)
+//                    {
+//                        categoria2++;
+//                    }
+//                    else if (edad >= 3)
+//                    {
+//                        categoria3++;
+//                    }
+//                }
+
+//            }
+//            double por1 = (categoria1 * 100) / 40;
+//            double por2 = (categoria2 * 100) / 40;
+//            double por3 = (categoria3 * 100) / 40;
+
+//            Console.WriteLine("El porcentaje de chimpances de 0 a 1 año es de: " + por1 + "%");
+//            Console.WriteLine("El porcentaje de chimpances de más de 1 año y menores de 3 años es de: " + por2 + "%");
+//            Console.WriteLine("El porcentaje de chimpances de 3 años en adelante es de: " + por3 + "%");
+//        }
+//        else
+//        {
+//            Console.WriteLine("Ingrese un animal válido para el estudio!");
+//            return;
+//        }
+//    }
+//}
+
+//class Punto6
+//{
+//    static void Main(String[] args)
+//    {
+//        int amarilla = 0;
+//        int rosa = 0;
+//        int roja = 0;
+//        int verde = 0;
+//        int azul = 0;
+//        Console.WriteLine("Cantidad de autos que ingresaron: ");
+//        int carrosIngresados = Convert.ToInt32(Console.ReadLine());
+
+//        if (carrosIngresados <= 0)
+//        {
+//            Console.WriteLine("Ingrese una cantidad válida!");
+//            return;
+//        }
+//        else
+//        {
+//            for (int i = 1; i <= carrosIngresados; i++)
+//            {
+//                Console.WriteLine("\n Ingrese la placa: ");
+//                long placa = Convert.ToInt64(Console.ReadLine());
+//                long ultimoDigito = placa % 10;
+
+//                if (ultimoDigito == 1 || ultimoDigito == 2)
+//                {
+//                    amarilla++;
+//                }
+//                else if (ultimoDigito == 3 || ultimoDigito == 4)
+//                {
+//                    rosa++;
+//                }
+//                else if (ultimoDigito == 5 || ultimoDigito == 6)
+//                {
+//                    roja++;
+//                }
+//                else if (ultimoDigito == 7 || ultimoDigito == 8)
+//                {
+//                    verde++;
+//                }
+//                else if (ultimoDigito == 9 || ultimoDigito == 0)
+//                {
+//                    azul++;
+//                }
+//            }
+//            Console.WriteLine("\n Ingresaron un total de " + amarilla + " vehículos con calcomanía amarilla!");
+//            Console.WriteLine("\n Ingresaron un total de " + rosa + " vehículos con calcomanía rosa!");
+//            Console.WriteLine("\n Ingresaron un total de " + roja + " vehículos con calcomanía roja!");
+//            Console.WriteLine("\n Ingresaron un total de " + verde + " vehículos con calcomanía verde!");
+//            Console.WriteLine("\n Ingresaron un total de " + azul + " vehículos con calcomanía azul!");
+//        }
+//    }
+//}
+
+//class Punto8
+//{
+//    static void Main(string[] args)
+//    {
+//        int reprobados = 0;
+//        for (int i = 1; i <= 50; i++)
+//        {
+//            Console.WriteLine("\n Ingrese la calificación");
+//            double calificacion = Convert.ToDouble(Console.ReadLine());
+
+//            if (calificacion < 0 || calificacion > 100)
+//            {
+//                Console.WriteLine("\n Ingrese calificaciónes válidas!");
+//                return;
+//            }
+//            else
+//            {
+//                if (calificacion >= 0 && calificacion <= 69)
+//                {
+//                    reprobados++;
+//                }
+//            }
+
+//        }
+//        double porcentaje = (reprobados * 100) / 50;
+//        Console.WriteLine("\n En total reprobó el " + porcentaje + " % de los estudiantes");
+//    }
+//}
+
+//class Punto6
+//{
+//    static void Main(string[] args)
+//    {
+//        Console.WriteLine("Ingrese la cantidad de niños");
+//        int cantidadNiños = Convert.ToInt32(Console.ReadLine());
+//        int[] niños = new int [cantidadNiños];
+
+//        for (int i = 0; i < cantidadNiños;i++)
+//        {
+//            Console.WriteLine("Ingrese el peso del niño #"+ (i+1));
+//            niños[i] = Convert.ToInt32(Console.ReadLine());
+//        }
+
+//        Console.WriteLine("Ingrese la cantidad de jóvenes");
+//        int cantidadJovenes = Convert.ToInt32(Console.ReadLine());
+//        int[] jovenes = new int[cantidadJovenes];
+
+//        for (int i = 0; i < cantidadJovenes; i++)
+//        {
+//            Console.WriteLine("Ingrese el peso del jóven #" + (i+1));
+//            jovenes[i] = Convert.ToInt32(Console.ReadLine());
+//        }
+
+//        Console.WriteLine("Ingrese la cantidad de adultos");
+//        int cantidadAdultos = Convert.ToInt32(Console.ReadLine());
+//        int[] adultos = new int[cantidadAdultos];
+
+//        for (int i = 0; i < cantidadAdultos; i++)
+//        {
+//            Console.WriteLine("Ingrese el peso del adulto #" + (i+1));
+//            adultos[i] = Convert.ToInt32(Console.ReadLine());
+//        }
+
+//        Console.WriteLine("Ingrese la cantidad de viejos");
+//        int cantidadViejos = Convert.ToInt32(Console.ReadLine());
+//        int[] viejos = new int[cantidadViejos];
+
+//        for (int i = 0; i < cantidadViejos; i++)
+//        {
+//            Console.WriteLine("Ingrese el peso del viejo #" + (i+1));
+//            viejos[i] = Convert.ToInt32(Console.ReadLine());
+//        }
+
+//        int pesoN = 0;
+//        int pesoJ = 0;
+//        int pesoA = 0;
+//        int pesoV = 0;
+
+//        for (int i = 0; i < niños.Length; i++)
+//        {
+//            pesoN += niños[i];
+//        }
+
+//        for (int i = 0; i <= jovenes.Length - 1; i++)
+//        {
+//            pesoJ += jovenes[i];
+//        }
+
+//        for (int i = 0; i <= adultos.Length - 1; i++)
+//        {
+//            pesoA += adultos[i];
+//        }
+
+//        for (int i = 0; i <= viejos.Length - 1; i++)
+//        {
+//            pesoV += viejos[i];
+//        }
+
+//        int promN = pesoN / niños.Length;
+//        int promJ = pesoJ / jovenes.Length;
+//        int promA = pesoA / adultos.Length;
+//        int promV = pesoV / viejos.Length;
+
+//        Console.WriteLine("---------Promedio de pesos por edades--------- \n");
+//        Console.WriteLine("Niños: " + promN + " Kg" + "\n");
+//        Console.WriteLine("Jóvenes: " + promJ + " Kg" + "\n");
+//        Console.WriteLine("Adultos: " + promA + "Kg " + "\n");
+//        Console.WriteLine("Viejos: " + promV + " Kg" + "\n");
+//    }
+//}
+
+//class Punto10{
+//    static void Main(string[] args)
+//    {
+//        string msj = "";
+//        int cantidadCorrientes = 0;
+//        int cantidadRecomendados = 0;
+//        double recaudoLocal = 0;
+//        double recaudoNacional = 0;
+//        double recaudoInternacional = 0;
+//        double valorGramo = 0;
+//        double tarifa = 0;
+
+//        do
+//        {
+           
+
+//            Console.WriteLine("\n Ingrese el peso de la carta: ");
+//            double pesoCarta = Convert.ToDouble(Console.ReadLine());
+
+//            if (pesoCarta <=0)
+//            {
+//                Console.WriteLine("Ingrese un peso válido");
+//                return;
+//            }
+
+//            Console.WriteLine("\n Ingrese el tipo de envío: 1-Corriente 2-Recomendado");
+//            int tipoEnvio = Convert.ToInt16(Console.ReadLine());
+
+//            if (tipoEnvio < 1 || tipoEnvio > 2)
+//            {
+//                Console.WriteLine("Ingrese un tipo válido");
+//                return;
+//            }
+
+//            Console.WriteLine("\n Ingrese el destino de la carta: 1-Local 2-Nacional 3-Internacional ");
+//            int destinocarta = Convert.ToInt16(Console.ReadLine());
+
+//            if (tipoEnvio == 1 && destinocarta == 1)
+//            {
+//                valorGramo = 100;
+//                double subtotal = pesoCarta * valorGramo;
+//                double precioIva = subtotal * 0.16;
+//                tarifa = subtotal + precioIva ;
+//                cantidadCorrientes++;
+//                recaudoLocal += tarifa;
+//            } else if (tipoEnvio == 1 && destinocarta == 2)
+//            {
+//                valorGramo = 150;
+//                double subtotal = pesoCarta * valorGramo;
+//                double precioIva = subtotal * 0.16;
+//                tarifa = subtotal + precioIva;
+//                cantidadCorrientes++;
+//                recaudoNacional += tarifa;
+
+//            } else if (tipoEnvio == 1 && destinocarta == 3)
+//            {
+//                valorGramo = 200;
+//                double subtotal = pesoCarta * valorGramo;
+//                double precioIva = subtotal * 0.16;
+//                tarifa = subtotal + precioIva ;
+//                cantidadCorrientes++;
+//                recaudoInternacional += tarifa;
+//            }
+//            else
+//            {
+//                if (tipoEnvio == 2 && destinocarta == 1)
+//                {
+//                    valorGramo = 200;
+//                    double subtotal = pesoCarta * valorGramo;
+//                    double precioIva = subtotal * 0.16;
+//                    tarifa = subtotal + precioIva;
+//                    cantidadRecomendados++;
+//                    recaudoLocal += tarifa;
+
+//                } else if (tipoEnvio == 2 && destinocarta == 2)
+//                {
+//                    valorGramo = 300;
+//                    double subtotal = pesoCarta * valorGramo;
+//                    double precioIva = subtotal * 0.16;
+//                    tarifa = subtotal + precioIva;
+//                    cantidadRecomendados++;
+//                    recaudoNacional += tarifa;
+//                } else if (tipoEnvio == 2 && destinocarta == 3)
+//                {
+//                    valorGramo = 400;
+//                    double subtotal = pesoCarta * valorGramo;
+//                    double precioIva = subtotal * 0.16;
+//                    tarifa = subtotal + precioIva;
+//                    cantidadRecomendados++;
+//                    recaudoInternacional += tarifa;
+//                }
+//            }
+//            Console.WriteLine("-------------INFORME ENVÍO-------------");
+//            Console.WriteLine("El valor total de este envío es de: $"+tarifa + "\n");
+
+//            Console.WriteLine("CONTINUAR?");
+//            msj = Convert.ToString(Console.ReadLine().ToUpper());
+//            Console.WriteLine("\n");
+//        } while (msj == "SI" || msj == "SÍ");
+
+//        Console.WriteLine("-------------INFORME ENVÍOS-------------");
+//        Console.WriteLine("En total hubo "+ cantidadCorrientes + " envíos corrientes \n");
+//        Console.WriteLine("En total hubo " + cantidadRecomendados + " envíos recomendados \n");
+
+//        Console.WriteLine("El total de recaudo de envíos locales fue de $" + recaudoLocal + "\n");
+//        Console.WriteLine("El total de recaudo de envíos nacionales fue de $" + recaudoNacional + "\n");
+//        Console.WriteLine("El total de recaudo de envíos internacionales fue de $" + recaudoInternacional + "\n");
+
+
+
+//    }
+//}
